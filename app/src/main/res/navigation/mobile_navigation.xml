@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.adalan.sge.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+        <action
+        android:id="@+id/action_nav_home_to_administradoresFragment"
+        app:destination="@id/administradoresFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_asistenciasFragment"
+            app:destination="@id/asistenciasFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_calificacionesFragment"
+            app:destination="@id/calificacionesFragment" />
+        <action
+            android:id="@+id/action_nav_home_to_documentacionFragment"
+            app:destination="@id/documentacionFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/administradoresFragment"
+        android:name="com.adalan.sge.AdministradoresFragment"
+        android:label="fragment_administradores"
+        tools:layout="@layout/fragment_administradores"
+        >
+    </fragment>
+    <fragment
+        android:id="@+id/asistenciasFragment"
+        android:name="com.adalan.sge.asistenciasFragment"
+        android:label="fragment_asistencias"
+        tools:layout="@layout/fragment_asistencias"
+        >
+    </fragment>
+    <fragment
+        android:id="@+id/calificacionesFragment"
+        android:name="com.adalan.sge.calificacionesFragment"
+        android:label="fragment_calificaciones"
+        tools:layout="@layout/fragment_calificaciones"
+        >
+    </fragment>
+    <fragment
+        android:id="@+id/documentacionFragment"
+        android:name="com.adalan.sge.documentacionFragment"
+        android:label="fragment_documentacion"
+        tools:layout="@layout/fragment_documentacion"
+        >
+    </fragment>
+</navigation>
